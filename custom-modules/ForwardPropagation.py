@@ -1,7 +1,7 @@
 import numpy as np
 
-def ForwardPropagation(self,data,input_data,no_of_layers,debug=False):
-        
+def ForwardPropagation(data,input_data,no_of_layers,debug=False):
+        data['a'+str(-1)] = input_data
         for i in range(no_of_layers):
 
             z = np.dot(data['w'+str(i)],input_data)
